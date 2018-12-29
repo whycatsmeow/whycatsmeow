@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Setup Hexo-NexT]]></title>
+    <url>%2F2018%2F12%2Fhexo-next-setup%2F</url>
+    <content type="text"><![CDATA[Install the latest NexT mkdir themes/next curl -s https://api.github.com/repos/theme-next/hexo-theme-next/releases/latest \ | grep tarball_url \ | cut -d &#39;&quot;&#39; -f 4 \ | wget -i - -O- \ | tar -zx -C themes/next --strip-components=1 Custom Gemini scheme themes/next/source/css/_custom/custom.styl Do single-point modification, my Gemini _custom.styl. Git deployment npm install hexo-deployer-git --save ## in root _config.yml deploy: type: git repo: &lt;repository url&gt; branch: [branch] #published message: [message] #leave this blank hexo clean &amp;&amp; hexo g &amp;&amp; hexo d Local search npm install hexo-generator-searchdb --save ## in root _config.yml search: path: search.xml field: post format: html limit: 10000 Choose fonts https://blogcharge.com/best-google-fonts/ I’m using Dorid Serif for post body and Menlo for code block. Tags hexo new page tags ## set tags/index.md meta title: Tag Cloud type: &quot;tags&quot; layout: &quot;tags&quot; EOF https://hexo.io/docs/ https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md https://github.com/theme-next/hexo-generator-searchdb]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Hexo-Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F12%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post$ hexo new &quot;My New Post&quot; More info: Writing Run server$ hexo server More info: Server Generate static files$ hexo generate More info: Generating Deploy to remote sites$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
